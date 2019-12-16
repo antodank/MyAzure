@@ -1,0 +1,58 @@
+Cloud Model
+
+- Infra as Service
+accessing hardwares (storage networking)
+
+- Platform as service
+software developement products (OS,Editors)
+
+- Software as service
+subscribe softwares instead purchasing,installing
+
+New Model-
+- XaaS
+Anything as Service
+It is fall under
+DaaS- Data
+STaaS - Storage
+CaaS - Communication as Service
+BPaaS - Bussiness Process as Service
+
+Key Enable Technologies
+Cloud Datacenters
+Virtualization
+Cloud API
+Cloud Storage
+Cloud Database
+
+Cloud API- 
+Commonly used API architecture is REST
+
+Cloud computing is not well suited for RDBMS due to limited scalability and integrity
+
+Non-RDMS are well suited for cloud
+
+Cloud computing model is based on 
+Abstraction
+Virtualization
+
+
+Core Attributes
+Elasticity - provisioning/De-Provisioning
+On Demand
+Provider pooled computing Resources
+Meter Service
+Broad Network Access
+
+
+Cloud Deployement Model -
+Public
+Private
+Hybrid 
+Community
+
+Cloud Costing -
+Free Payment
+Plan Payment
+Pay As You Go
+

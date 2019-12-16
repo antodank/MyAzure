@@ -1,0 +1,96 @@
+Azure App Service Plan -
+
+An App Service plan is the container for your app. The App Service plan settings will determine the location, features, cost and compute resources associated with your app.
+
+Each app is hosted on App service
+Each app service is in some App service plan
+Multiple app services can map single app service plan
+App service plan defines neccessary compute, storage and network just same as VM
+We can Scale Up, Sclae IN or Scale Out app service plan as per requirement and usage
+
+Create App service Plan -> set Valid name -> location -> select price tier where we select compute
+
+App service can host different types of application - .net core, ASP.NET web, API, Mobile, Node
+We can create a app service using azure cli or powershell
+to create a web app we need resource group, app service plan name and webapp name
+
+
+To push in git
+git init
+git remote add
+git push
+
+
+
+-------------------------------------------------------------------------------
+Deployement Slot
+
+Allow diffrent version of your web app with diffrent URL 
+allow us to validate the application on azure infra before deploying to customer infra
+We can deploy diffrent versions by adding slots yo your app service plan by CLI or by Portal
+Minimize downtime
+Created in same resource and same app service plan No additional Play
+
+Go to web app ->  select Application setting -> set key value -> tick slot
+select deployement slots -> add slot -> give name -> finish
+Goto Slot -> Application settings -> change as per your requirement
+You will get clone URL
+Push this webapp to git usingclone URL
+
+From portal click swap button to change from one slot to other
+------------------------------------------------------------------------------
+
+Monitoring -
+- Monotors CPU Usage, Data In , Data Out , Disk Usage, Memory Perventage
+
+From Left Pane (Resorces) -> Select Monitor -> select Matrix -> select your app service plan
+
+---------------------------------------------------------------------------------------
+Alerts - 
+You can set Alerts for unusual activities in your app service
+-> we can configure to send email, SMS or phone call
+
+Activity Log alert - operational activities
+Metric Log alert - web traffic, CPU utilization
+
+For Application Error Alerts -> Go To Metric Log Alert -> Add rule -> Select Event source and Condition 
+-> you can add email or specify web hook or add logic app
+
+--------------------------------------------------------------------------------------------
+Scalling -
+We can scale by
+Scale Up (vertical)    - moving to diffrent price tier of compute -> means increasing CPU proccessing, memory,disk
+Scale Out (horizontal) - increasing instance count (prefered)
+Sclae In               - Reducing Instance Count 
+
+We can enable autoscalling by setting scalling rule for Scale In condition and Scale Out condition
+
+--------------------------------------------------------------------------------------------------
+Debuging 
+select App Service Plan -> Diagnostic logs -> set parameters for application logs
+
+--------------------------------------------------------------------------------------
+Application Insight 
+- detect & diagnose issues in your web app
+- Remote debugging Tools
+
+Used for 
+Find and diagnose run-time exceptions
+Find and diagnose performance issues
+Monitor and alert on application health
+Analyze customer usage and information
+
+To Create Application Insights
+-> Create Application Insight Resource from portal
+Go To project in VS -> right click and select apllication Insight Telementory option
+-> select Application insight resource -> register
+
+-------------------------------------------------------------------------------
+
+Advance debugging Tool - 
+App Service Plan -> Developement Tool -> Advanced tools 
+
+
+
+
+

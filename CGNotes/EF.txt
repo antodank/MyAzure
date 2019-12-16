@@ -1,0 +1,104 @@
+EF
+Entity framework is an Object/Relational Mapping (O/RM) framework.
+Entity Framework reduces your development time, improves Code readability,  Type Safety.
+EF uses LINQ for querying data
+EF uses context objects are used to connect to the database
+
+
+EDMX (Entity Data Model XML) is an XML file which contains all the mapping details of how your objects map with SQL tables. T
+he EDMX file is further divided into three sections: CSDL, SSDL, and MSL.
+
+EDM adds the provider and connection string settings in the App.config or web.config
+
+generates a entity class for each database table
+
+generates a context class - default context class name is <DB Name>Entities 
+
+Entity classes are POCO (Plain Old CLR Object) classes. 
+==================================================================================================================================
+
+DbContext is an important class in Entity Framework API. 
+It is a bridge between your domain or entity classes and the database.
+
+Entity Class -> DbContext -> Database
+
+responsible for -
+Querying
+Caching
+Change Tracking
+Persisting  data
+Manage Relationship
+
+entity context class  derives from DbContext
+
+the context class (dbnameEntities) 
+- includes the entityset of type DbSet<TEntity> for all the entities.
+public virtual DbSet<Student> Students { get; set; }
+public virtual DbSet<Student> Teachers { get; set; }
+
+- onmodelcreating method - OnModelCreating method allows us to configure the model using DbModelBuilder
+
+The DbSet class represents an entity set that can be used for create, read, update, and delete operations.
+
+Nothing will change in physical database until we call SaveChanges()
+
+DataAnnotation is used to 
+Set Keys - [Key]
+Set length , type of data, format
+
+if we pass primary key value in EF insert then it will,raise exception
+
+We use Virtual classes in Entity Framework in context class where we define DBSet of corresponding table.
+========================================================================================================
+To Execute raw query -
+for select
+context.Students.SqlQuery("Select * from Student").ToList<Student>();
+
+Insert update delete
+context.Database.ExecuteSqlCommand("insert into student(studentname) values('Robert')");
+
+To execute SP - 
+Select SP in DB Objects Wizard
+Then we need to map in EDM
+Right Click on edmx and open model browser -> "Add function import" option -> write function name -> select sp from dropdown
+-> select query output none / scalar / complex / Entities 
+
+to call - 
+context.GetCoursesByStudentId(1).ToList<Course>(); 
+
+aleternate
+ctx.Courses.SqlQuery("exec GetCoursesByStudentId @StudentId ", idParam).ToList<Course>();
+===============================================================================================
+Eager loading 
+is achieved using the Include() method.
+
+var stud1 = ctx.Students.Include("Standard.Teachers")
+                    .Where(s => s.StudentName == "Bill")
+                    .FirstOrDefault<Student>();
+					
+ above query will load all entities Student, Standard and Teacher.
+==========================================================================
+Lazy loading 
+is delaying the loading of related data, until you specifically request for it
+
+Rules for lazy loading:
+context.Configuration.ProxyCreationEnabled should be true.
+context.Configuration.LazyLoadingEnabled should be true.
+Navigation property should be defined as public, virtual.
+
+to disable lazy loading
+Configuration.LazyLoadingEnabled = false;
+
+================================================
+Explicite loading
+se the Load() method to load related entities explicitly
+
+=============================================
+
+the SaveChanges() method internally creates a transaction and wraps all INSERT, UPDATE and DELETE operations under it. 
+Multiple SaveChanges() calls, create separate transactions
+
+DbContext.Database.BeginTransaction(): allow to do mutiple save changes in one transaction
+
+DbContext.Database.UseTransaction() : uses supplied transaction i.e. out of scope of context
+means we can pass SQLConnection transaction

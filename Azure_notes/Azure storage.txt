@@ -1,0 +1,100 @@
+Azure Storage services
+
+Azure Storage includes these data services:
+
+Azure Blobs: A massively scalable object store for text and binary data.
+Azure Files: Managed file shares for cloud or on-premises deployments.
+Azure Queues: A messaging store for reliable messaging between application components.
+Azure Tables: A NoSQL store for schemaless storage of structured data.
+
+Blob :-
+Microsoft's object storage solution for the cloud
+storing massive amounts of unstructured data, such as text or binary data.
+
+Objects in Blob storage can be accessed from anywhere in the world via HTTP or HTTPS
+
+client applications can access blobs via 
+URLs 
+Azure Storage REST API 
+Azure PowerShell
+Azure CLI
+Azure Storage client library
+
+Blob service concepts
+
+Storage Account
+All access to data objects in Azure Storage happens through a storage account. 
+
+Container
+A container organizes a set of blobs
+All blobs reside within a container
+A storage account can contain an unlimited number of containers
+
+==================================================
+
+Azure Storage
+Blob is short for Binary Large Object
+- store any type of file
+- binary file, image file, text file, videos
+
+Table Storage
+- No Sql
+- Key-value table storage
+- Structured or unstructured data
+
+Queues Storage
+- Queues allow us to store and retrieve messages
+- Resilient scaling and buffering
+- to build reliable, high-scale websites
+
+File Storage
+- Lift and shift migration
+- Simple and inexpensive
+- Move data to cloud with no coding
+
+Disk storage
+
+
+======================================================
+
+SQL Database
+
+Create new SQL Database from portal
+
+- Requires Server Name - this server is not physical server but a logical container in which one or more database resides. It required for each SQL databse to associate with any of the logical container i.e. Server
+
+-- Databases created under container may or may not belongs to same machine
+
+Configuring Proce Tier-
+Azure SQL Databse  - select DTU - Data Throughput Uit (CPU + Memory + IO)
+- 10 DTU tier is enough  for website with 50K hits
+
+- Once Database is created - go to overview - select Firewall - select ON - Add public IP from where you want to connect in Rules
+
+
+
+-- Connect Databse from SSMS and then create a user with limited privillages 
+
+======================================================
+Create Storage Account
+Select Data Replication-
+Azure Storage Data is always replicated to make sure your data is safe and available
+
+LRS - locally redundant storage is the cheapest form of storage. When we write data using LRS then write operation is not successful until data get copied in to three replicas inside same data center
+
+GRS - geo-redundant storage. Write operation is completed when  it get copied into three replicas in same data centers and  in addition Azure will asynchronously replicate that data into a second data center
+
+Read access geo-redundant storage - you can read from secondary data center if primary is unavailable
+
+Blob Storage-
+Container - is like a folder for our blobs. 
+Each container can have its own name, and settings, and permissions
+Blobs are created inside containers.
+Nested Containers are not allowed in Azure
+
+=============================================================
+
+Create a Azure Cosmos DB -
+Create a collection -> set collection name -> collection ID-> Capacity -> Throughput
+
+Throughput -> argues per second -> argues are requests per unit

@@ -1,0 +1,43 @@
+Object is the entity which can be observed and indetified (refer)
+e.g.
+Fan is class but the fan which we are currently using is an object
+
+1. object is an enity which has 
+properties - to indetify state for validation
+Methods - bahavior or fuctionality
+Events - change in state
+
+2. Each object is different from other by state and behavior
+
+3. Object Life
+
+Class - is template used for creating objects
+
+
+OO Application - is collection of related objects,communicate with each other, exchange messages with each other in controlled manner
+as per the rule of business
+
+Component - Third party objects are called as component
+
+
+
+
+Encapsulation - process of bind data and functionality into one single unit in controlled enviroment
+
+
+Data abstarction - Focusing on essential data and discarding details of an object.
+ensure hides the low level data
+It provides security to data
+selectively exposing data to outer world
+
+Inheritanse
+the process of acquiring the existing functionalityof the parent and add new features by a child object
+ provides generalization,extesibility and reusability
+
+
+Polymorphism - 
+many forms
+An object in different forms and in each form it provides same functionality but implemented in different ways
+
+Function overloading 
+Function overriding

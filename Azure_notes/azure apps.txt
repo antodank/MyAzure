@@ -1,0 +1,10 @@
+https://buildazure.com/2017/03/08/azure-functions-vs-web-jobs-how-to-choose/
+https://buildazure.com/2017/08/15/scaling-azure-functions-with-durable-functions/?utm_content=buffer3d9f8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+https://azure.microsoft.com/en-us/solutions/architecture/
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs
+
+
+videos
+https://azure.microsoft.com/en-us/resources/videos/azure-serverless-end-to-end-with-functions-logic-apps-and-event-grid/

@@ -1,0 +1,32 @@
+https://techbeacon.com/how-modernize-legacy-apps-hybrid-cloud
+
+Before Jumping to hybrid cloud
+
+Approaches
+
+Lift and shift
+
+You move the application and its data without making any significant changes to the application itself
+
+picking either the public or private cloud as the destination for the application.
+
+Advantage
+Cost Effective
+
+The disadvantage is that you are still using a single platform—either public or private. You are not taking advantage of the distributed capability of a hybrid cloud by distributing the workload.
+
+Partition
+
+sepate the workload within the application
+requires minimal modification
+
+
+Applications can be partitioned to best take advantage of your hybrid cloud, but to do this effectively you must understand the application in great detail and be prepared for some modifications, as well as testing and deployment.
+
+Refactor
+
+Completely re-write your application
+In leveraging so-called "cloud-native" features, you optimize the application to use your underlying private and public cloud resources most effectively
+
+cloud-native applications can use cloud-native features and APIs to more efficiently use underlying resources
+

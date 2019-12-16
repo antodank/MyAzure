@@ -1,0 +1,71 @@
+Service Fabric
+Code Packages
+Exe
+dependencies.dll
+
+config Packages
+xml json
+
+service packge
+nodes
+
+scale in
+
+scale Out
+
+stateless
+
+statefull
+
+
+https://channel9.msdn.com/Events/Connect/2017/T116
+
+Channel 9
+MS Virtual Academy 
+
+
+Why Microservice
+https://www.youtube.com/watch?v=EEwT6y5h09I
+
+Container Service Fabric
+https://channel9.msdn.com/Events/Build/2017/B8106
+
+What is Azure Service Fabric?
+Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers
+
+- enables you to build and manage scalable and reliable applications composed of microservices
+- Services runs at high density on a shared pool of machines called as cluster
+- provides a sophisticated, lightweight runtime to build distributed, scalable, stateless, and stateful microservices running in containers
+
+
+Service Fabric programming model overview
+
+
+Service Fabric offers multiple ways to write and manage your services.
+offers multiple ways to write and manage your services
+
+Programming models Provided by Service Fabric -
+
+1. Guest executables
+simple executable (written in any language) that can be run as a service
+Services uses the Service Fabric APIs 
+
+2. Reliable Services
+Reliable Services is a light-weight framework for writing services that integrate with the Service Fabric platform and benefit from the full set of platform features
+Reliable Services can be stateless or statefull
+
+3. ASP.NET Core
+ASP.NET Core is a new open-source and cross-platform framework for building modern cloud-based Internet-connected applications, such as web apps, IoT apps, and mobile backends
+
+4. Reliable Actors
+Reliable Actors is a Service Fabric application framework based on the Virtual Actor pattern. 
+An actor is an isolated, independent unit of compute and state with single-threaded execution. 
+
+5. Containers
+ Service Fabric can also deploy services in containers. 
+Service Fabric supports deployment of Linux containers and Windows containers on Windows Server 2016
+ Service Fabric can also deploy services in containers. Service Fabric supports deployment of Linux containers and Windows containers on Windows Server 2016
+
+
+
+https://blog.appliedis.com/2017/06/09/building-stateless-microservice-using-microsoft-service-fabric-series/

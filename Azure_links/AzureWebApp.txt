@@ -1,0 +1,5 @@
+Azure Web App
+
+Web Apps is a service for hosting web applications, REST APIs, and mobile back ends
+
+security, load balancing, autoscaling, and automated management

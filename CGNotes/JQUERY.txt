@@ -1,0 +1,110 @@
+document.ready() function is called as soon as DOM is loaded 
+body.onload() function is called when everything gets loaded on the page that includes DOM, images and all associated resources
+
+Content Delivery Network
+CDN is to serve content to end-users with high availability and high performance.
+
+eq() returns the element as a jQuery object.
+get() return a DOM element. 
+
+$(this) - is JQuery element
+this - is DOM element
+
+$.type(Object) which returns the built-in JavaScript type for the object.
+
+
+live Event
+to add events to dynamically added html elements
+.live('mouseover', function(){ $(this).addClass('selected');   })
+.live('mouseout',  function(){ $(this).removeClass('selected'); });
+
+
+Checking if an element exists
+if ($("#someDiv").length) {
+    //hooray!!! it exists...
+}
+
+add html element into DOM
+var newDiv = $('<div></div>');
+newDiv.attr("id","myNewDiv").appendTo("body");
+
+Chaining
+$("a").hide().addClass().fadeIn().hide();
+
+cloning elemet into DOM
+var cloned = $('#somediv').clone();
+$('#dvText').clone().appendTo('body');
+
+attr(): Get the value of an attribute
+rop():  Get the value of a property
+if value is modified via javascript/jquery then use prop to get current state
+
+
+event.preventDefault(): Stops the default action of an element from happening.
+event.stopPropagation(): Prevents the event from bubbling up the DOM tree
+return false - does both
+
+
+Check if somthing visible or empty
+if($(element).is(":visible") == "true") {
+       //The element is Visible
+}
+
+if($(element).is(":empty") == "true") {
+       //The element is empty
+}
+
+
+disable context menu
+$(document).ready(function(){
+    $(document).bind("contextmenu",function(e){
+        return false;
+    });
+});
+
+tracing events or function
+console.log
+
+
+Ajax -
+
+Get data
+
+$.ajax({
+			type: "GET",
+			url: URL,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			// Specify the authentication header
+			// btoa() method encodes a string to Base64
+			headers: {
+				'Authorization': 'Basic ' + btoa(username + ':' + password)
+			},
+			success: function (response) {
+				console.log(response);
+				},
+				failure: function (response) {
+                        console.log("failure - " + response.responseText);
+                    },
+                    error: function (response) {
+                        console.log("error - " + response.responseText);
+                    }
+        });
+		
+		
+Post Data		
+var formData = {name:"Ram",age:"31"}; 
+$.ajax({
+    url : "AJAX_POST_URL",
+    type: "POST",
+    data : formData,
+    success: function(data, textStatus, jqXHR)
+    {
+        //data - response from server
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+ 
+    }
+});
+

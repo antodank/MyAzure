@@ -1,0 +1,9 @@
+https://docs.microsoft.com/en-us/azure/container-service/dcos-swarm/container-service-intro#using-azure-container-service
+
+create an ACS Cluster
+
+https://docs.microsoft.com/en-us/azure/container-service/dcos-swarm/container-service-create-acs-cluster-cli
+
+Connect to ACS cluster
+
+https://docs.microsoft.com/en-us/azure/container-service/dcos-swarm/container-service-connect

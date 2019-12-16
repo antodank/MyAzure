@@ -1,0 +1,73 @@
+https://www.toptal.com/devops/getting-started-with-docker-simplifying-devops
+https://docker-curriculum.com/#prerequisites
+
+Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a containers to run on the host operating system i.e. Linux, Win
+or
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.
+
+it allows users to package an application with all of its dependencies into a standardized unit for software development.
+
+--------------------------------------------------------------
+
+Containerization is an approach to software development in which an application or service, its dependencies, and its configuration (abstracted as deployment manifest files) are packaged together as a container image.
+
+A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. 
+Available for both Linux and Windows based apps
+
+Containers are the instances of images - they are the living thing.
+
+Containers enables developers and IT professionals to deploy them across environments with little or no modification.
+ 
+There could be multiple containers running based on the same image.
+
+container orchestration tools -
+Kubernetes is the most open and extensible but also the most difficult to master. 
+
+Docker Swarm is the easiest to use, but can be restrictive after a point. 
+
+DC/OS has some great features for Big Data workloads.
+
+--------------------------------------------------------------------------------
+Impoprtant term in docker
+docker Images - The blueprints of our application which form the basis of containers. (docker pull)
+
+Containers - Created from Docker images and run the actual application. (docker run)
+
+Docker Daemon - The background service running on the host that manages building, running and distributing Docker containers.
+Docker clinet talks with this service which runs on host OS.
+
+Docker Client - The command line tool that allows the user to interact with the daemon
+
+Docker Hub - A public registry of Docker images
+
+Dockerfile - A text file that contains instructions for how to build a Docker image.
+
+Lifecycle
+Docker Images can be downloaded from registries explicitly using docker pull command or implicitely using docker run command which stores it locally.
+container based on that downloaded image started using docker daemon.
+Docker daemon responsible for creating, running, and monitoring containers. It also takes care of building and storing images.
+docker run command executes the executables within the conatiner
+ 
+
+docker command flow -
+docker pull -
+allows to fetch images from docker hub
+docker run
+When you call run,
+the Docker client finds the image (busybox in this case), loads up the container and then runs a command in that container.
+Docker ps -
+List all the running conatiners
+docker stop -
+pass container ID retrived from docker ps command to stop container
+docker rm -
+to remove container from host
+
+Useful commands -
+stop - Stops a running container.
+start - Starts a stopped container.
+commit - Creates a new image from a container’s changes.
+rm - Removes one or more containers.
+rmi - Removes one or more images.
+ps - Lists containers.
+images - Lists images.
+exec - Runs a command in a running container.

@@ -1,0 +1,28 @@
+
+Azure Subscription
+
+Azure Resources
+Everything we create in Azure, from virtual machines to app services, each one of these is generically known as a resource. 
+In Portal. Click on + New Resource
+Here you can storage, compute, networking, Web, Mobile, Database  
+
+
+Azure Region
+continuous expanding data centers
+Azure is programmable DataCenter - 
+All azure resources brlongs to specific region
+You can add, manage and configure all zure resources without using portal by following -
+SDK and tools are available for all major platforms
+REST API
+Azure CLI
+Azure Powershell  
+
+Azure VM-
+We can select wide range of OS with some pre-installed software to create a VM in Azure
+
+Virtual Machine -> Create -> Select OS -> Give valid name -> Disk Type
+SSD - solid State Disk (costly)
+HDD - Hard Disk Drive
+Select Resource Group -> Select Disk -> select Virtual Network -> select Subnet -> make public IP static -> select Firewall -> create
+
+

@@ -1,0 +1,49 @@
+Create Resource Group
+
+# Create resource group
+az group create --name myResourceGroup --location westeurope
+
+# Create an azure storage account
+az storage account create \
+  --name myconsumptionstore \
+  --location westeurope \
+  --resource-group myResourceGroup \
+  --sku Standard_LRS
+
+
+Create Function App - 
+
+az functionapp create --name
+                      --resource-group
+                      --storage-account
+                      [--consumption-plan-location]
+                      [--deployment-container-image-name]
+                      [--deployment-local-git]
+                      [--deployment-source-branch]
+                      [--deployment-source-url]
+                      [--plan]
+
+e.g.
+az functionapp create -g MyResourceGroup  -p MyPlan -n MyUniqueAppName -s MyStorageAccount
+
+Delete Function app
+
+az group delete --name myResourceGroup
+
+
+Enlist all Function app
+
+az group delete --name myResourceGroup
+
+
+Show function app
+az functionapp show --name
+                    --resource-group
+
+Start function app
+az functionapp start --name
+                     --resource-group
+
+stop function app
+az functionapp stop  --name
+                     --resource-group

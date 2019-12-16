@@ -1,0 +1,6 @@
+Resource Group -
+
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal
+
+Azur Function Developer Guide
+https://www.youtube.com/watch?v=2ZGYLblGZQA

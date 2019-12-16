@@ -1,0 +1,30 @@
+Azure CLI
+
+az login
+- wil give you a URL with access code
+
+az account list --output table
+
+az account set --subscription "My Demos"
+
+Create VM -
+
+az group create --name TutorialResources --location eastus
+
+az vm create --resource-group TutorialResources \
+  --name TutorialVM1 \
+  --image UbuntuLTS \
+  --generate-ssh-keys \
+  --verbose 
+  
+  will return json file with Public IP
+  
+C:\Users\antodank.CORP>az vm create --resource-group social_resource --name anto
+nvm1 --image win2016datacenter --admin-username anton --admin-password Capgemini
+@1234 --no-wait
+
+
+
+===============================================================
+
+Azure Function

@@ -1,0 +1,222 @@
+LINQ - Langugae Integrated Query
+used to manipulate collections of objects.
+Can work on Array , List, ArrayList 
+
+Query Syntax
+from [identifier] in [source collection]
+let [expression]
+where [boolean expression]
+order by [expression(ascending/descending)]
+select [expression]
+group [expression] by [expression] 
+into [expression]
+
+
+Method Syntax
+[source collection]
+.Where [boolean expression]
+.OrderBy [expression(ascending/descending)]
+.Select [expression]
+.GroupBy [expression]
+
+========================================================================
+
+//Query Syntax
+var res1 = from om in OMaster
+           where om.OrderDate.Month == 6
+           select om;
+		   
+//Method syntax
+var res2 = OMaster.Where(om => om.OrderDate.Month == 6).Select(s => s) ;
+
+//Collection of object
+IEnumerable<Book> bookCollection = from b in books
+                                   select b;
+//Collection of specific property							   
+IEnumerable<string> titles = from b in books
+                             select b.Title; 
+							 
+//Collection of Anonymous Types
+var res = from om in OrderMaster
+          where om.OrderDate.Month == 6
+          select new { Order_NO = om.OrderNo, Order_Date = om.OrderDate } ;
+=======================================================================
+
+Sorting Elemets
+var res = from om in OMaster
+		  oderdby om.OrderDate
+		  select om
+
+orderby
+orderbyDescending
+ThenBy - for sorting on sorted elements
+ThenbyDescending
+
+==========================================================================
+Filter uaing where and select
+var res1 = from om in OMaster
+                       where om.OrderDate.Month == 6
+                       select om;
+var res2 = OMaster.Where(om => om.OrderDate.Month == 6).Select(s => s) ;
+
+Indexed Where - an indexed Where clause that returns digits whose name is shorter than their value.
+string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+     
+var shortDigits = digits.Where((digit, index) => digit.Length < index);
+Console.WriteLine("Short digits:");
+foreach (var d in shortDigits)
+{
+   Console.WriteLine("The word {0} is shorter than its value.", d);
+}
+
+
+===========================================================================
+Local variable = let is used as local variable
+IEnumerable<Author> firstAuthors =  from b in books
+                                    let title = b.Title 
+                                    let authors = b.Authors
+                                    where title.Contains("The")
+                                    select authors[0];
+
+
+=============================================================================
+Set Functions
+
+Distinct - used to extract distinct elements from a collection,
+Union - creates a collection that represents the union of two existing collections,
+Concat - add elements from one collection to another collection,
+Intersect - creates a collection that contains elements that exist in both collections,
+Except - creates a collection that contains elements that exist in one, but do not exist in another collection,
+Reverse - creates a copy of a collection with elements in reversed order,
+EquallAll - checks whether two collections have the same elements in the same order,
+Take - this function takes a number of elements from one collection, and places them in a new collection,
+Skip - this function skips a number of elements in a collection,
+
+int[] num = { 2, 2, 3, 5, 5 };
+var uniqueFactors = num.Distinct();
+				
+int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+int[] numbersB = { 1, 3, 5, 7, 8 };
+
+var uniqueNumbers = numbersA.Union(numbersB);
+var commonNumbers = numbersA.Intersect(numbersB);
+var OnlyNumbersFromA = numbersA.Except(numbersB);
+
+For Paging use Skip(10).Take(5) 
+=======================================================================================
+Conversion Function 
+
+ToArray - used to convert elements of collection IEnumerable<T> to array of elements <T>.
+ToList - used to convert elements of collection IEnumerable<T> to list List<T>.
+ToDictionary - used to convert elements of a collection to a Dictionary. During conversion, keys and values must be specified.
+OfType - used to extract the elements of the collection IEnumerable<T1> that implements the interface/class T2, and put them in the collection IEnumerable<T2>.
+
+object[] numbers = { null, 1.0, "two", 3, "four", 5, "six", 7.0 };
+var doubles = numbers.OfType<double>();
+				
+===========================================================================================================
+Aggregate Function 
+int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+var greaterthan5 = numbers.Count( x=>x>5 )
+var sumofeven = numbers.Sum( x=>(x%2==0) )
+var minofodd = numbers.Min( x=>(x%2==1) )
+numbers.Max()
+numbers.Average()
+
+==================================================================================================
+Element Function
+ElementAt
+Single
+First
+Last
+=========================================================================================
+Single Vs First -
+
+Single - 
+It returns a single specific element from a collection of elements if element match found. 
+An exception is thrown, 
+if no record found 
+more than one match found for that element in the collection.
+
+SingleOrDefault
+if no record found then return default value i.e. null
+An exception is thrown, 
+more than one match found for that element in the collection.
+
+First
+It returns first specific element from a collection of elements when more than one match found
+An exception is thrown, 
+if no match is found for that element in the collection.
+
+FirstOrDefault
+A default value is returned, if no match is found for that element in the collection.
+
+
+For value types default value
+bool false
+char '\0'
+int double 0
+
+For Ref types default values
+null
+
+======================================
+
+Deferred Execution
+It is executed when the Query variable is iterated by using loop like as for, foreach
+
+var query = from customer in context.Customers
+			where customer.City == "Delhi"
+			select customer; // Query does not execute here
+
+ foreach (var Customer in query) // Query executes here
+ 
+Immediate Execution
+In case of immediate execution, a query is executed at the point of its declaration.
+
+eg  query which returns a singleton value (a single value or a set of values) like Average, Sum, Count, List
+var query = (from customer in context.Customers
+			where customer.City == "Delhi"
+			select customer).Count(); // Query execute here
+			
+=========================================
+
+Select and SelectMany are projection operators. Select operator is used to select value from a collection and SelectMany operator is used to select values from a collection of collection i.e. nested collection.
+
+SalectMany - no double foreach loop required if collection contains another collection
+
+============================
+Generation Operator
+Enumerable.Range(100, 50) // generate sequence from 100 to 149 
+Enumerable.Repeat(7, 10) // Repeat 7 - 10 times
+
+=====================================
+
+IEnumerable, IList both are best to query data from in-memory collections
+
+IEnumerable
+can move forward only over a collection, it can’t move backward and between the items.
+doesn't support add or remove items from the list.
+can not find out the no of elements in the collection
+supports further filtering.
+
+IList
+is used to access an element in a specific position/index in a list.
+support add or remove items from the list.
+can find out the no of elements in the collection
+doesnt support further filtering.
+=============================================================
+IEnumerable
+part of System.Collections
+best to query data from in-memory collections List, Array
+execute select query on server side, load data in-memory on client side and then filter data
+is suitable for LINQ to Object 
+doesn’t support lazy loading. Hence not suitable for paging like scenarios.
+
+IQueryable
+part of System.Linq
+best to query data from out-memory (like remote database, service) collections
+IQueryable execute select query on server side with all filters.
+IQueryable is suitable for LINQ to SQL queries.
+Queryable support lazy loading. Hence it is suitable for paging like scenarios.

@@ -1,0 +1,15 @@
+Public DNS	ec2-52-38-31-69.us-west-2.compute.amazonaws.com
+User name	Administrator
+Password	
+f)be;LxpC5f4339l%eq;-XnDX6NUQeE2
+
+
+
+
+Public DNS	ec2-52-38-225-121.us-west-2.compute.amazonaws.com
+User name	Administrator
+Password	
+8Du%sJECIqQlwLZOy42$VW;z2jfZwoK-
+
+
+https://www.parthbuch.com/blog/post/azure-aws-interconnect/

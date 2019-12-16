@@ -1,0 +1,8 @@
+http://www.techproresearch.com/article/why-containers-are-critical-to-successful-devops-projects/
+
+
+http://www.zdnet.com/article/what-is-cloud-computing-everything-you-need-to-know-from-public-and-private-cloud-to-software-as-a/
+
+http://www.zdnet.com/article/containers-fundamental-to-the-evolution-of-the-cloud/
+
+https://github.com/lfalck

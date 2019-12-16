@@ -1,0 +1,119 @@
+Web Service
+REST API
+
+what will be the right size of the server for my business needs
+how may i increase server utilization
+how many server do i need
+
+How do i deploy
+how often should i patch
+how often should i backup my server
+
+Which OS
+Which loging tool
+
+
+This whole process usally takes atleast a week
+
+What is Serverless?
+Serverless computing is the abstraction of servers, infrastructure, and operating systems
+
+Abstraction From Server Hardware or software
+- Event Driven
+- Timer, 
+- Http Request
+- Microbilling
+- Computaion plan, app service plan
+
+Automatic Scale
+
+Focus On Logic
+
+Faster Market Time
+
+
+---------------
+Serverless Components in Azure -
+Functions - serverless Compute
+Logic Apps - server less workfow
+Event Grid
+
+
+Azure Function -
+Azure Functions is an event-driven compute experience that allows you to execute your code, written in the programming language of your choice, without worrying about servers. Benefit from scale on demand and never pay for idle capacity.
+
+Logic Apps
+provide serverless workflows that allow developers to easily integrate data with their apps instead of writing complex glue code between disparate systems. Logic Apps also allow you to orchestrate and connect the serverless functions and APIs of your application.
+
+Event Grid
+Event Grid is a fully managed event routing service that enables rich application scenarios by connecting serverless logic to events coming from multiple Azure services or from your own apps.
+
+Azure Function
+
+Triggers and binding
+Azure Functions allows you to write code in response to events in Azure and other services, through triggers and bindings
+Can be Triggered by -
+HttpRequest
+Schedular
+Storage Queue Messages
+a Generic Webhook
+A Github Webhook
+add a message to an Azure storage queue
+store unstructured data in Azure cosmos DB
+
+Languages0 
+Generally available (GA) - Fully supported and approved for production use.
+C# F# Javascript
+Preview - Not yet supported but is expected to reach GA status in the future.
+Java
+Experimental - Not supported and might be abandoned in the future; no guarantee of eventual preview or GA status.
+Python, PHP, Batch, Bash
+
+
+
+Azure Functions hosting plans comparison
+
+-Consumption plan
+Pay only when your functions are running.
+Scale out automatically, even during periods of high load.
+the default timeout for functions on a Consumption plan is 5 minutes. The value can be increased to 10 minutes for the Function App by changing the property functionTimeout in host.json.
+
+-App Service plan
+You have existing, underutilized VMs that are already running other App Service instances.
+You expect your function apps to run continuously, or nearly continuously.
+You need more CPU or memory options than computation 
+You need to run longer than the maximum execution timeplan
+
+The following are units for billing:
+Resource consumption in gigabyte-seconds (GB-s). Computed as a combination of memory size and execution time for all functions within a function app.
+Executions. Counted each time a function is executed in response to an event trigger.
+
+
+Function Execution Time
+In Azure Functions, a single Function execution has a maximum of 5 minutes by default to execute.
+However, the “functionTimeout” property within the host.json file can be used to extend it up to 10 minutes of runtime.
+
+Function Chaining 
+Azure Functions, it’s best practice to break up long running tasks / processes into smaller discrete units that can be chained together. This is referred to as Function Chaining
+
+there needed to be a Message Queue of some kind that would be used for the communication between workflow tasks in the chain. This Queue could be Storage Queues, Service Bus Queues or Topics, or really any message queue that has the scalability to meet the demands of the workflow process.
+
+
+Create a serverless API using Azure Functions 
+
+- Highly scalable API
+- Built in HttpTriggers and bindings
+
+
++ New
+
+Compute
+
+Function APP
+
+
+Create an Azure Functions project in Visual Studio
+
+
+Web + Mobile
+

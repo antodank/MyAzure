@@ -1,0 +1,23 @@
+In ASP.NET Core MVC, Routing is the system by which URLs get mapped to controller actions and other resources. 
+There are two primary methods of creating routes: 
+convention-based routing, which defines a few routes in the Startup.cs file
+attribute routing, which defines a route per action.
+
+route handlers class which do the actual mapping.
+
+There are two main ways to define routes:
+
+Convention-based routing creates routes based on a series of conventions, defined in the ASP.NET Core Startup.cs file.
+Attribute routing creates routes based on attributes placed on controller actions.
+The two routing systems can co-exist in the same system.
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    ...
+    app.UseMvc(routes =>
+    {
+        routes.MapRoute(
+            template: "{controller}/{action}");
+    });
+}
+

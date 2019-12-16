@@ -1,0 +1,3 @@
+Azure Powershell
+
+It is a command line tool that uses the scripts or cmdlets to perform tasks

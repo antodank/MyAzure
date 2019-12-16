@@ -1,0 +1,11 @@
+A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. 
+Available for both Linux and Windows based apps
+
+
+
+container orchestration tools -
+Kubernetes is the most open and extensible but also the most difficult to master. 
+
+Docker Swarm is the easiest to use, but can be restrictive after a point. 
+
+DC/OS has some great features for Big Data workloads.

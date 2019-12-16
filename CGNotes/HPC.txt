@@ -1,0 +1,25 @@
+High Performance Computing
+
+- parallel computation of complex problems
+-  it is used heavily in oil/gas, financial services, manufacturing, health sciences and academia
+
+HPC problems can generally be distilled down to two different problem types: Tightly Coupled and Loosely Coupled
+
+Tightly Coupled - 
+Tightly Coupled problems are computations that require communication between each parallel computation.
+MPI
+
+Loosely Coupled or Embarrassingly Parallel problems are parallel computations that do not require any interaction between the parallel processes
+
+
+To conclude this post I want to list out some terms that are used in HPC and can be referred to as we dive into HPC on Azure.
+
+Cluster – A group of computing resources available to do HPC processing. For MPI jobs they are on their own Infiniband network with the head node attached to the corporate or enterprise network, plus the infiniband network.
+Message Passing Interface – MPI is a standardized message-passing system designed to run on a variety of parallel computing architectures. There are many types of MPI available, MPICH is an open source version. Intel MPI and Microsoft MPI are two others.
+Infiniband – IB is a computer networking communication standard used in HPC. It allows for high throughput and low latency messages between compute nodes in tightly coupled HPC problems.
+Tightly Coupled – Problems that require the use of MPI to solve in parallel
+Loosely Coupled – Problems that can be solved in parallel independent of the other compute processes. Also called Embarrassingly Parallel or Parametric Sweep.
+Scheduler – A piece of software that submits HPC jobs to the compute nodes. It keeps track of the computations and informs the user when the job is completed.
+Head Node – The computing system (either physical or virtual) that kicks off the computation. Usually is running the scheduler software.
+Compute Node – A computer (physical or virtual) that runs a portion of the compute job. There can be two to hundreds of thousands of compute nodes.
+Lustre – A parallel distributed file system used for HPC. It is an open source implementation.

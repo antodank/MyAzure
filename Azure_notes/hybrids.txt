@@ -1,0 +1,27 @@
+Ways to Implement a Hybrid Cloud
+
+Choosing the method which works best will depend on the following factors
+- the resources of the individual organization
+- what is expected from the public cloud and private clouds. 
+
+Following methods ar generally practicsed - 
+
+1. Public and private cloud services are provided by different vendors, and then integrated into one service.
+
+2. Public and private clouds services are provided by single vendor as a one package.
+
+3. The organization provides and manages its own private cloud, then integrates with public cloud services offered by vendors.
+
+
+Benifts of Hybrid Approach - 
+
+Flexibility -  seamless switching between public and private cloud whenever there is significant increase in capacity requirements for a short period of time
+
+Security - proper evaluation of private and secured data, maiantain data security while exposing data
+
+Cost Effectivity - with Thorough understanding of private cloudservices costs (e.g., monthly server cost) and understanding public cloud variable costs we can achive maximum performance with lowest price.
+
+Scalability - Easily scale up or down depending on real-time needs
+
+Speed & Automation - The ability to quickly deploy applications and satisfy business needs is major consideration in hybrid cloud develeopement and deployment. The immediate availability ofresources and capabilities in public cloud services makes this model desirable when fast deployment is required.
+
